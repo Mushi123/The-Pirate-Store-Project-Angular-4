@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-10">
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item clearfix"
+        *ngFor="let prod of stockval; let i=index"
+      >
+        {{ prod.name }} ({{ "$"+prod.price }})
+        <span type="button" class="btn btn-success pull-right" (click)="AddtoCart(prod)">Add to Cart</span>
+      </a>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-9">
+    <hr>
+    <div class="row">
+      <div class="col-xs-3"><h4 class="text-center">Total cost: {{totalcost}}</h4></div>
+      <div class="col-xs-3"><h4 class="text-center">Total savings: {{disc}}</h4></div>
+      <div class="col-xs-3"><h4 class="text-center">Number of items in Cart: {{qty}}</h4></div>
+    </div>
+    <ul class="list-group">
+      <a
+        class="list-group-item clearfix"
+        *ngFor="let prod of products; let i=index"
+      >
+        {{ prod.name }} ({{ prod.qty }})
+        <span type="button" class="btn btn-danger pull-right" (click)="onDelete(prod)">Delete</span>
+      </a>
+    </ul>
+  </div>
+</div>
